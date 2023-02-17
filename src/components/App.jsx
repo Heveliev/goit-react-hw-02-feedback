@@ -38,10 +38,9 @@ render(){
 
     return(<>
       <Section  title='Please leave feedback'>
-        {options.map(option=><FeedbackOptions 
-        key={option} 
-        option={option}
-        onLeaveFeedback={this.countPositiveFeedbackPercentage}/>)}
+      <FeedbackOptions  
+        option={options}
+        onLeaveFeedback={this.countPositiveFeedbackPercentage}/>
       </Section>
       <Section title='Statistics'>
         {total ? <Statistics 
